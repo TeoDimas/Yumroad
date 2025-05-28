@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
 
 from wtforms import StringField, PasswordField, validators
+from wtforms.fields.html5 import DecimalField
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from yumroad.models import User
@@ -11,7 +12,8 @@ class EmptyForm(FlaskForm):
 class ProductForm(FlaskForm):
     name = StringField('Name', [validators.Length(min=4, max=60)])
     description = StringField('Description')
-
+    picture_url = StringField('Picture URL', description='Optional', validators=[validators.Optional(), validators.URL()])
+    price = DecimalField('Price', description='in USD, Optional')
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[validators.email(), validators.required()])
@@ -33,6 +35,7 @@ class LoginForm(FlaskForm):
         return True
 
 class SignupForm(FlaskForm):
+    store_name = StringField('Store Name', validators=[validators.required(), validators.length(min=4)])
     email = StringField('Email', validators=[validators.email(), validators.required()])
     password = PasswordField('Password', validators=[validators.required(), validators.length(min=4),
                                                      validators.EqualTo('confirm', message='Passwords must match')])
@@ -50,4 +53,7 @@ class SignupForm(FlaskForm):
             self.email.errors.append('That email already has an account')
             return False
         return True
+
+        # TODO: Maybe you'll want a validation to prevent the same store name from being used twice
+
 

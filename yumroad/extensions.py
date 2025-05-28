@@ -1,6 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
+from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_mail import Mail
+from flask_assets import Environment
+
+from yumroad.payments import Checkout
+
 from sqlalchemy import MetaData
 
 
@@ -13,5 +19,9 @@ naming_convention = {
 }
 
 db = SQLAlchemy(metadata=MetaData(naming_convention=naming_convention))
+migrate = Migrate()
 csrf = CSRFProtect()
 login_manager = LoginManager()
+mail = Mail()
+checkout = Checkout()
+assets_env = Environment()
