@@ -39,12 +39,11 @@ APPNAME_ENV=test ./manage.py test --coverage
 ```
 
 # Screenshots
-![image](https://github.com/user-attachments/assets/5e139c83-5962-4733-bfee-d0e2533260e8)
-![image](https://github.com/user-attachments/assets/7c45412a-9af8-4dd6-b6f0-45e2e69cd6bd)
-![image](https://github.com/user-attachments/assets/1870f479-9153-452f-8461-d5c445f363cf)
-![image](https://github.com/user-attachments/assets/a12f90f7-cfeb-486e-b47b-27a55f43068f)
-![image](https://github.com/user-attachments/assets/80fe09d9-dab8-4ce1-9aae-434dfbf17a2f)
-![image](https://github.com/user-attachments/assets/3149fe5f-ce7c-483e-8427-ad2f04894e68)
+![image](https://github.com/user-attachments/assets/9c0eb27a-06b0-402a-a46a-924033378c8c)
+![image](https://github.com/user-attachments/assets/3c53be1d-445c-4ca3-831b-dae930055458)
+![image](https://github.com/user-attachments/assets/c75f210c-946a-44bf-b47b-92728a1a0608)
+![image](https://github.com/user-attachments/assets/ab3cd036-5172-45cb-a309-9451d931dfaf)
+
 
 
 
