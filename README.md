@@ -42,7 +42,6 @@ APPNAME_ENV=test ./manage.py test --coverage
 ![image](https://github.com/user-attachments/assets/9c0eb27a-06b0-402a-a46a-924033378c8c)
 ![image](https://github.com/user-attachments/assets/3c53be1d-445c-4ca3-831b-dae930055458)
 ![image](https://github.com/user-attachments/assets/c75f210c-946a-44bf-b47b-92728a1a0608)
-![image](https://github.com/user-attachments/assets/ab3cd036-5172-45cb-a309-9451d931dfaf)
 
 
 
