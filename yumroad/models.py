@@ -12,7 +12,7 @@ class Product(db.Model):
     @validates('name')
     def validate_name(self, key, name):
         if len(name.strip()) <= 3:
-            raise ValueError('needs to have a name')
+            raise ValueError('needs to have a name with at least 3 characters')
         return name
 
 class User(UserMixin, db.Model):
