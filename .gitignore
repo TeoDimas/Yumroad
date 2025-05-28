@@ -8,6 +8,7 @@ __pycache__
 
 .cache
 _cache/*
+*pytest_cache*
 
 # local development
 database.db
