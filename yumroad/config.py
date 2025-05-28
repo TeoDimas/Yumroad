@@ -22,6 +22,11 @@ class DevConfig(BaseConfig):
     SECRET_KEY = os.getenv('YUMROAD_SECRET_KEY', '00000abcdef')
     SQLALCHEMY_ECHO = True
 
+class DevConfig(BaseConfig):
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(folder_path, 'dev.db'))
+    SECRET_KEY = os.getenv('YUMROAD_SECRET_KEY', '00000abcdef')
+    SQLALCHEMY_ECHO = True
+
 class TestConfig(BaseConfig):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(folder_path, 'test.db'))
