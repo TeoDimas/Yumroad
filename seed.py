@@ -15,9 +15,9 @@ def setup():
         db.session.add(user)
         store = Store(name="The newline store", user=user)
         for i in range(2):
-            prod = Product(name='Fullstack Book v{}'.format((1+i)*2),
+            prod = Product(name='Fullstack Book v{}'.format((1+i)),
                            description='Book #{} in the series'.format(i+1),
-                           price_cents=100*i+1,
+                           price_cents=100*(i+1),
                            store=store)
             db.session.add(prod)
         db.session.commit()

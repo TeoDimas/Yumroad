@@ -5,6 +5,7 @@ venv*
 env
 *.tags*
 __pycache__
+*.webassets-cache*
 
 .cache
 _cache/*
