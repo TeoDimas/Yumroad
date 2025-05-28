@@ -1,6 +1,5 @@
 from yumroad import create_app, db
 from yumroad.models import Product
-from yumroad import create_app, db
 
 app = create_app('dev')
 
