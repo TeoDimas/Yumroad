@@ -1,5 +1,6 @@
 # Yumroad
 
+Yumroad is a scaffold for starting new Flask applications. It takes care of the boilerplate code (like User Registration, OAuth, Teams, and Billing), allowing you to focus on building your application. Yumroad is built upon best practices for modern Flask applications.
 
 # Screenshots
 ![image](https://github.com/user-attachments/assets/adaacea0-c946-4b2a-a7bb-5a88cfebb9af)
