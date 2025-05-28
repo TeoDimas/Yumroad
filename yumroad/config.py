@@ -7,11 +7,17 @@ class BaseConfig:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.getenv('YUMROAD_SECRET_KEY')
 
-class DevConfig(BaseConfig):
-    SECRET_KEY = os.getenv('YUMROAD_SECRET_KEY', '00000abcdef')
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(folder_path, 'dev.db'))
-    SQLALCHEMY_ECHO = True
+    MAIL_SERVER = os.getenv('MAIL_SERVER', 'smtp.mailgun.org')
+    MAIL_PORT = os.getenv('MAIL_SERVER_PORT', 2525)
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
+    MAIL_USE_TLS = os.getenv('MAIL_USE_TLS', True)
+    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
 
+
+class DevConfig(BaseConfig):
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(folder_path, 'dev.db'))
+    SECRET_KEY = os.getenv('YUMROAD_SECRET_KEY', '00000abcdef')
+    SQLALCHEMY_ECHO = True
 
 class TestConfig(BaseConfig):
     TESTING = True
@@ -21,7 +27,7 @@ class TestConfig(BaseConfig):
 
 class ProdConfig(BaseConfig):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.getenv('DASTBASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
     SESSION_PROTECTION = "strong"
     # You should be using HTTPS in production anyway, but if you are not, turn
     # these two off
