@@ -1,5 +1,5 @@
 from yumroad import create_app, db
-from yumroad.models import Product, User
+from yumroad.models import Product, Store
 
 app = create_app('dev')
 
@@ -11,10 +11,10 @@ def reset():
 def setup():
     with app.app_context():
         db.create_all()
-        user = User.create("test@example.com", "test")
-        db.session.add(user)
+        store = Store(name="The newline store")
         for i in range(10):
             prod = Product(name='Product {}'.format(i*20),
-                           description='Book v{}'.format(i))
+                           description='Book v{}'.format(i),
+                           store=store)
             db.session.add(prod)
         db.session.commit()

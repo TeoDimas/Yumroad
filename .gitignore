@@ -14,9 +14,5 @@ database.db
 *.db
 *.db-journal
 
-# testing
-.coverage
-
 # Visual Studio Code
 .vscode
-
