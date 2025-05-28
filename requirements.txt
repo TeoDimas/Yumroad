@@ -3,12 +3,24 @@ requests
 gunicorn
 
 flask-sqlalchemy
+sqlalchemy
 Flask-WTF
 wtforms[email]
+flask-migrate
 flask-login
+flask-mail
 
+flask-assets
+cssmin
+jsmin
+
+
+stripe
+
+# Dev
 pytest
 pytest-flask
 pytest-cov
+vcrpy
 
 flake8
