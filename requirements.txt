@@ -14,13 +14,20 @@ flask-assets
 cssmin
 jsmin
 
+Flask-RQ2
+rq==1.4.3
+rq-dashboard
 
 stripe
+
+sentry-sdk[flask]
+
 
 # Dev
 pytest
 pytest-flask
 pytest-cov
 vcrpy
+fakeredis
 
 flake8
