@@ -36,7 +36,7 @@ To run tests locally, try this command:
 
 ```
 APPNAME_ENV=test ./manage.py test --coverage
-
+```
 
 # Screenshots
 ![image](https://github.com/user-attachments/assets/adaacea0-c946-4b2a-a7bb-5a88cfebb9af)
