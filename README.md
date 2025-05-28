@@ -2,6 +2,17 @@
 
 Yumroad is a scaffold for starting new Flask applications. It takes care of the boilerplate code (like User Registration, OAuth, Teams, and Billing), allowing you to focus on building your application. Yumroad is built upon best practices for modern Flask applications.
 
+# Setup
+
+Usage of Python 3 is required. It can be installed on [Python.org](https://www.python.org/)
+
+```bash
+# Optional but recommended:
+python3 -m venv env; source env/bin/activate
+pip install -r requirements.txt
+./manage.py server # or `FLASK_APP=manage FLASK_ENV=development flask run`
+
+
 # Screenshots
 ![image](https://github.com/user-attachments/assets/adaacea0-c946-4b2a-a7bb-5a88cfebb9af)
 ![image](https://github.com/user-attachments/assets/1cd0ac08-db69-4459-92b8-88cb6539560b)
