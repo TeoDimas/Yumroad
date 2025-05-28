@@ -10,5 +10,5 @@ def app():
 @pytest.fixture
 def init_database():
     db.create_all()
-    yield
+    yield db
     db.drop_all()
